@@ -9,7 +9,7 @@ class BackendStyleListener
     /**
      * @Hook("contao.backend.stylesheets")
      */
-    public function addBackendStylesheets(array $stylesheets): array
+    public function __invoke(array $stylesheets): array
     {
         $stylesheets[] = 'bundles/flybackend/css/backend.css';
         return $stylesheets;
