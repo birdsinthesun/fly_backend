@@ -19,11 +19,6 @@
     }
   },
   "extra": {
-    "contao-manager-plugin": "Bits\\FlyBackendBundle\\ContaoManager\\Plugin",
-    "contao": {
-      "sources": [
-        "assets"
-      ]
-    }
+    "contao-manager-plugin": "Bits\\FlyBackendBundle\\ContaoManager\\Plugin"
   }
 }
