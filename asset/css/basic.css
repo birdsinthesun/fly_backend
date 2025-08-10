@@ -1,0 +1,528 @@
+/* =============================================================================
+   Contao 5.5 Backend Theme - Minimalistisch mit Lachsrot
+   ============================================================================= */
+
+:root {
+  /* Farbpalette */
+  --color-primary: #ffffff;           /* Haupthintergrund weiß */
+  --color-secondary: #fa8072;         /* Lachsrot für Akzente */
+  --color-secondary-hover: rgba(250, 128, 114, 0.8);
+  --color-secondary-active: rgba(250, 128, 114, 0.9);
+  --color-text: #4a5568;              /* Grauton für Text */
+  --color-text-light: #718096;        /* Hellerer Grauton */
+  --color-text-dark: #2d3748;         /* Dunklerer Grauton */
+  --color-border: #e2e8f0;            /* Sanfte Rahmenfarbe */
+  --color-shadow: rgba(0, 0, 0, 0.1);  /* Sanfte Schatten */
+  --color-shadow-hover: rgba(0, 0, 0, 0.15);
+  
+  /* Typografie */
+  --font-size-base: 16px;
+  --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --line-height: 1.5;
+  
+  /* Abstände und Größen */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  
+  /* Übergänge */
+  --transition-fast: 0.15s ease-in-out;
+  --transition-medium: 0.3s ease-in-out;
+  
+  /* Schatten */
+  --shadow-sm: 0 1px 3px var(--color-shadow);
+  --shadow-md: 0 4px 6px var(--color-shadow);
+  --shadow-lg: 0 10px 15px var(--color-shadow);
+  --shadow-xl: 0 20px 25px var(--color-shadow);
+}
+
+/* =============================================================================
+   Basis-Styles
+   ============================================================================= */
+
+body, 
+#container {
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height);
+  margin: 0;
+  padding: 0;
+}
+
+/* =============================================================================
+   Navigation und Header
+   ============================================================================= */
+
+#header,
+.tl_header {
+  background-color: var(--color-primary);
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  padding: var(--spacing-md);
+}
+
+#left,
+.tl_left {
+  background-color: var(--color-primary);
+  border-right: 1px solid var(--color-border);
+}
+
+.tl_navigation a,
+.tl_level_1 a,
+.tl_level_2 a {
+  color: var(--color-text);
+  text-decoration: none;
+  padding: var(--spacing-sm) var(--spacing-md);
+  display: block;
+  transition: all var(--transition-fast);
+  border-radius: 4px;
+  margin: 2px;
+}
+
+.tl_navigation a:hover,
+.tl_level_1 a:hover,
+.tl_level_2 a:hover {
+  background-color: rgba(250, 128, 114, 0.1);
+  color: var(--color-secondary);
+  transform: translateX(2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.tl_navigation a.active,
+.tl_level_1 a.active,
+.tl_level_2 a.active {
+  background-color: var(--color-secondary);
+  color: white;
+  box-shadow: var(--shadow-md);
+}
+
+/* =============================================================================
+   Hauptinhaltsbereich
+   ============================================================================= */
+
+#main,
+.tl_main {
+  background-color: var(--color-primary);
+  padding: var(--spacing-lg);
+}
+
+.tl_content {
+  background-color: var(--color-primary);
+}
+
+/* =============================================================================
+   Buttons und Interaktive Elemente
+   ============================================================================= */
+
+button,
+.tl_submit,
+.tl_button,
+input[type="submit"],
+input[type="button"],
+.button {
+  background-color: var(--color-secondary);
+  color: white;
+  border: none;
+  padding: var(--spacing-sm) var(--spacing-lg);
+  font-size: var(--font-size-base);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  box-shadow: var(--shadow-sm);
+  font-weight: 500;
+}
+
+button:hover,
+.tl_submit:hover,
+.tl_button:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover,
+.button:hover {
+  background-color: var(--color-secondary-hover);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+button:active,
+.tl_submit:active,
+.tl_button:active,
+input[type="submit"]:active,
+input[type="button"]:active,
+.button:active {
+  background-color: var(--color-secondary-active);
+  transform: translateY(0);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Sekundäre Buttons */
+.tl_button_secondary,
+button.secondary {
+  background-color: transparent;
+  color: var(--color-secondary);
+  border: 1px solid var(--color-secondary);
+}
+
+.tl_button_secondary:hover,
+button.secondary:hover {
+  background-color: var(--color-secondary);
+  color: white;
+}
+
+/* =============================================================================
+   Links
+   ============================================================================= */
+
+a {
+  color: var(--color-secondary);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-secondary-hover);
+  text-decoration: underline;
+}
+
+a:active {
+  color: var(--color-secondary-active);
+}
+
+/* =============================================================================
+   Formulare
+   ============================================================================= */
+
+.tl_formbody,
+.tl_box {
+  background-color: var(--color-primary);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: var(--spacing-lg);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+textarea,
+select,
+.tl_text,
+.tl_textarea,
+.tl_select {
+  background-color: var(--color-primary);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  font-size: var(--font-size-base);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: 4px;
+  transition: all var(--transition-fast);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input:focus,
+textarea:focus,
+select:focus,
+.tl_text:focus,
+.tl_textarea:focus,
+.tl_select:focus {
+  outline: none;
+  border-color: var(--color-secondary);
+  box-shadow: 0 0 0 3px rgba(250, 128, 114, 0.2);
+}
+
+/* =============================================================================
+   Tabellen
+   ============================================================================= */
+
+.tl_listing,
+table {
+  background-color: var(--color-primary);
+  border-collapse: collapse;
+  width: 100%;
+  box-shadow: var(--shadow-sm);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.tl_listing th,
+.tl_listing td,
+th, td {
+  padding: var(--spacing-md);
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.tl_listing th,
+th {
+  background-color: #f8fafc;
+  font-weight: 600;
+  color: var(--color-text-dark);
+}
+
+.tl_listing tr:hover,
+tr:hover {
+  background-color: rgba(250, 128, 114, 0.05);
+  transition: background-color var(--transition-fast);
+}
+
+/* =============================================================================
+   Popups und Modals
+   ============================================================================= */
+
+.tl_popup,
+.modal,
+.overlay {
+  background-color: var(--color-primary);
+  border: none;
+  border-radius: 12px;
+  box-shadow: var(--shadow-xl);
+  padding: var(--spacing-xl);
+  max-width: 500px;
+  position: relative;
+}
+
+.tl_popup::before,
+.modal::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(248, 250, 252, 0.9));
+  border-radius: 12px;
+  z-index: -1;
+}
+
+/* Popup Header */
+.tl_popup h3,
+.modal h3 {
+  color: var(--color-text-dark);
+  margin-top: 0;
+  padding-bottom: var(--spacing-md);
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* =============================================================================
+   Breadcrumb
+   ============================================================================= */
+
+.tl_path,
+.breadcrumb {
+  background-color: #f8fafc;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: 6px;
+  margin-bottom: var(--spacing-md);
+  border: 1px solid var(--color-border);
+}
+
+.tl_path a,
+.breadcrumb a {
+  color: var(--color-text-light);
+  transition: color var(--transition-fast);
+}
+
+.tl_path a:hover,
+.breadcrumb a:hover {
+  color: var(--color-secondary);
+}
+
+/* =============================================================================
+   Meldungen und Alerts
+   ============================================================================= */
+
+.tl_error,
+.alert-error {
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #dc2626;
+  padding: var(--spacing-md);
+  border-radius: 6px;
+  margin-bottom: var(--spacing-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.tl_confirm,
+.alert-success {
+  background-color: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  color: #16a34a;
+  padding: var(--spacing-md);
+  border-radius: 6px;
+  margin-bottom: var(--spacing-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.tl_info,
+.alert-info {
+  background-color: #eff6ff;
+  border: 1px solid #bfdbfe;
+  color: #2563eb;
+  padding: var(--spacing-md);
+  border-radius: 6px;
+  margin-bottom: var(--spacing-md);
+  box-shadow: var(--shadow-sm);
+}
+
+/* =============================================================================
+   Sidebar und Widgets
+   ============================================================================= */
+
+.tl_sidebar {
+  background-color: var(--color-primary);
+  border-left: 1px solid var(--color-border);
+  padding: var(--spacing-lg);
+}
+
+.tl_widget {
+  background-color: var(--color-primary);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+  box-shadow: var(--shadow-sm);
+}
+
+/* =============================================================================
+   Checkboxes und Radio Buttons
+   ============================================================================= */
+
+input[type="checkbox"],
+input[type="radio"] {
+  accent-color: var(--color-secondary);
+  transform: scale(1.1);
+  margin-right: var(--spacing-sm);
+}
+
+/* =============================================================================
+   Loading States und Animationen
+   ============================================================================= */
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.loading {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tl_popup,
+.modal {
+  animation: slideIn var(--transition-medium) ease-out;
+}
+
+/* =============================================================================
+   Hover-Animationen für interaktive Elemente
+   ============================================================================= */
+
+.tl_listing tr,
+.clickable,
+button,
+.tl_button,
+a[href] {
+  transition: all var(--transition-fast);
+}
+
+.tl_listing tr:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(250, 128, 114, 0.1);
+}
+
+/* Ripple-Effekt für Buttons */
+.tl_submit,
+.tl_button,
+button {
+  position: relative;
+  overflow: hidden;
+}
+
+.tl_submit::after,
+.tl_button::after,
+button::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.3s, height 0.3s;
+}
+
+.tl_submit:active::after,
+.tl_button:active::after,
+button:active::after {
+  width: 200px;
+  height: 200px;
+}
+
+/* =============================================================================
+   Responsives Design
+   ============================================================================= */
+
+@media (max-width: 768px) {
+  :root {
+    --font-size-base: 14px;
+    --spacing-md: 0.75rem;
+    --spacing-lg: 1rem;
+  }
+  
+  .tl_popup,
+  .modal {
+    margin: var(--spacing-md);
+    padding: var(--spacing-lg);
+  }
+  
+  #left {
+    width: 100%;
+  }
+}
+
+/* =============================================================================
+   Scrollbars (Webkit)
+   ============================================================================= */
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-secondary);
+  border-radius: 4px;
+  opacity: 0.7;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-secondary-hover);
+  opacity: 1;
+}
