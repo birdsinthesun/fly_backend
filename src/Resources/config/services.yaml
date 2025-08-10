@@ -1,0 +1,4 @@
+services:
+  Bits\FlyBackendBundle\EventListener\BackendStyleListener:
+    tags:
+      - { name: kernel.event_listener, event: contao.backend.stylesheets }

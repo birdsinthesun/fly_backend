@@ -1,0 +1,24 @@
+{
+  "name": "birdsinthesun/fly_backend",
+  "type": "contao-bundle",
+  "description": "Fly Backend Theme for Contao 5.5",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Dein Name",
+      "email": "dein.email@example.com"
+    }
+  ],
+  "require": {
+    "php": ">=8.1",
+    "contao/core-bundle": "^5.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "Bits\\FlyBackendBundle\\": "src/"
+    }
+  },
+  "extra": {
+    "contao-manager-plugin": "Bits\\FlyBackendBundle\\ContaoManager\\Plugin"
+  }
+}
