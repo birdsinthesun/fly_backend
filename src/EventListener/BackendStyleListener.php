@@ -11,7 +11,7 @@ class BackendStyleListener
      */
     public function __invoke(array $stylesheets): array
     {
-        $stylesheets[] = 'bundles/flybackend/css/backend.css';
+        $stylesheets[] = 'system/flybackend/styles/basic.css';
         return $stylesheets;
     }
 }
