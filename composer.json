@@ -22,10 +22,10 @@
     "contao-manager-plugin": "Bits\\FlyBackendBundle\\ContaoManager\\Plugin",
     "scripts": {
             "post-install-cmd": [
-                "cd system/themes && ln -sfn ../../vendor/birdsinthesun/fly_backend/system/themes/flybackend flybackend"
+                "php bin/console asset:install --relative"
             ],
             "post-update-cmd": [
-                "cd system/themes && ln -sfn ../../vendor/birdsinthesun/fly_backend/system/themes/flybackend flybackend"
+                "php bin/console asset:install --relative"
             ] 
         }
     }
