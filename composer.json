@@ -22,7 +22,7 @@
     "contao-manager-plugin": "Bits\\FlyBackendBundle\\ContaoManager\\Plugin",
     "contao": {
       "sources": [
-        "system"
+        "assets"
       ]
     }
   }
