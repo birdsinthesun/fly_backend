@@ -19,6 +19,13 @@
     }
   },
   "extra": {
-    "contao-manager-plugin": "Bits\\FlyBackendBundle\\ContaoManager\\Plugin"
-  }
+    "contao-manager-plugin": "Bits\\FlyBackendBundle\\ContaoManager\\Plugin",
+    "scripts": {
+        "post-install-cmd": [
+          "php bin/console asset:install --relative"
+        ],
+        "post-update-cmd": [
+          "php bin/console asset:install --relative"
+        ]  
+    }
 }
