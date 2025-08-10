@@ -1,5 +1,0 @@
-framework:
-    assets:
-        packages:
-            themes:
-                base_path: '/system/themes'
