@@ -131,7 +131,27 @@ body,
 #tl_navigation ul{
     list-style:none;
 }
-/* breadcrumb*/
+/* breadcrumb list*/
+
+#tl_breadcrumb{
+    max-width:100%;
+    z-index:999996999;
+    position:sticky;
+    top:1.6rem;
+    left:0;
+    background-color:rgba(244, 162, 97,0.6); /*#2A9D8F*/ /*#F4A261;*/
+    max-width:100%;
+    display:flex;
+    list-style:none;
+      padding:0;
+    }
+#tl_breadcrumb li{
+  
+    display: flex;
+	flex-direction: column;
+	align-items:center;
+    }
+/* breadcrumb edit*/
 .jump-targets{
     max-width:100%;
     z-index:999996999;
