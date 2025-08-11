@@ -84,7 +84,47 @@ body,
     font-family:"Font Awesome";
     font-weight:900;
     color:var(--color-secondary);
-    padding-right:2vw;
+    padding-right:1vw;
+    
+}
+.group-favorites::before{
+    content:"\f005";
+    font-family:"Font Awesome";
+    font-weight:900;
+    color:var(--color-secondary);
+    padding-right:1vw;
+    
+}
+.group-content::before{
+    content:"\f0ac";
+    font-family:"Font Awesome";
+    font-weight:900;
+    color:var(--color-secondary);
+    padding-right:1vw;
+    
+}
+.group-design::before{
+    content:"\f53f";
+    font-family:"Font Awesome";
+    font-weight:900;
+    color:var(--color-secondary);
+    padding-right:1vw;
+    
+}
+.group-accounts::before{
+    content:"\f007";
+    font-family:"Font Awesome";
+    font-weight:900;
+    color:var(--color-secondary);
+    padding-right:1vw;
+    
+}
+.group-system::before{
+    content:"\f0ad";
+    font-family:"Font Awesome";
+    font-weight:900;
+    color:var(--color-secondary);
+    padding-right:1vw;
     
 }
 /* navigation left */
