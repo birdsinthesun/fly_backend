@@ -78,13 +78,18 @@ body,
   margin: 0;
   padding: 0;
 }
-/* navigation icons*/
+/* navigation left icons*/
 .group-fly_bills::before{
     content:"\f570";
     font-family:"Font Awesome";
     font-weight:900;
     color:var(--color-secondary);
+    padding-right:2vw;
     
+}
+/* navigation left */
+#tl_navigation ul{
+    list-style:none;
 }
 /*layout*/
 .invisible{
