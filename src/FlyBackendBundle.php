@@ -16,6 +16,7 @@ class FlyBackendBundle extends AbstractBundle
         
         $loader = new YamlFileLoader($container, new FileLocator(__DIR__.'/Resources/config')); 
         $loader->load('services.yaml');
+        $loader->load('config.yaml');
 
          $loader2 = new PhpFileLoader($container, new FileLocator(__DIR__.'/Resources/config')); 
         $loader2->load('bundles.php');
