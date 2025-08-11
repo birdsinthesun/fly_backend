@@ -170,7 +170,7 @@ body,
     margin-top:-0.6rem;
     margin-left:-0.2rem;
     }
-[href^="/contao/preview"]::after{
+#tl_listing [href^="/contao/preview"]::after{
     margin-top:0;
     margin-left:-1.5rem;
     display:inline-block;
