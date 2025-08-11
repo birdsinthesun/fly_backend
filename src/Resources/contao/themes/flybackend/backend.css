@@ -79,6 +79,10 @@ body,
   padding: 0;
 }
 /*layout*/
+.hidden{
+    display:none;
+    
+}
 #container {
     display: flex;
 }
