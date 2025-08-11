@@ -52,6 +52,18 @@ body,
   margin: 0;
   padding: 0;
 }
+/*layout*/
+#container {
+    display: flex;
+}
+#left{
+    width:15vw;
+    box-sizing: border-box;
+}
+#main{
+    width:85vw;
+    box-sizing: border-box;
+}
 
 /* =============================================================================
    Navigation und Header
