@@ -132,14 +132,46 @@ body,
     list-style:none;
 }
 /* breadcrumb*/
+.jump-targets{
+    max-width:100%;
+    z-index:999996999;
+    position:sticky;
+    top:1.6rem;
+    left:0;
+    background-color:rgba(244, 162, 97,0.6); /*#2A9D8F*/ /*#F4A261;*/}
 .jump-targets ul{
+    max-width:100%;
     display:flex;
     list-style:none;
+      padding:0;
     }
 .jump-targets ul li{
+  
     display: flex;
 	flex-direction: column;
 	align-items:center;
+    }
+.jump-targets button{
+    font-size:0.9rem;
+    padding:0.5vw;
+    background-color:transparent;
+    color:#fff;
+    box-shadow:none;
+    
+    }
+.jump-targets button:hover{
+
+    background-color:transparent;
+    color:rgba(244, 162, 97,1);
+    box-shadow:none;
+    
+    }
+.tl_formbody_edit legend button{
+    background-color:rgba(42, 157, 143,0.8);
+    }
+.tl_formbody_edit legend button:hover{
+    background-color:rgba(42, 157, 143,0.8);
+    cursor:default;
     }
   /* submit container */ 
 .tl_formbody_submit{
@@ -157,7 +189,19 @@ body,
       }
 #sbtog{
       display:none;}
+
 /* header menu*/
+h1{
+    text-align:center;}
+
+#home{
+    display:inline-block;
+    height:4rem;
+    width:15vw;
+    background:transparent url("contao-logo.svg") top left no-repeat ;
+    background-size:contain;
+    }
+#home span{display:none;}
 #tmenu{
     display:flex;
     list-style:none;
@@ -203,6 +247,7 @@ body,
    
    
     }
+
 /*layout*/
 
 .invisible{
@@ -212,14 +257,29 @@ body,
 #container {
     display: flex;
 }
+
 #left{
-    width:15vw;
+ 
+    z-index:9979999999;
+    position:absolute;
+    left:0;
+    top:210px;
+    width:20vw;
     box-sizing: border-box;
+    transform: translateX(-100%); /* komplett nach links raus schieben */
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease;
 }
+.show-navigation #left{
+    left:0;
+     transform: translateX(0); /* sichtbar */
+  opacity: 1;
+    }
 #main{
-    width:85vw;
+    width:100vw;
     box-sizing: border-box;
 }
+
 
 /* =============================================================================
    Navigation und Header
