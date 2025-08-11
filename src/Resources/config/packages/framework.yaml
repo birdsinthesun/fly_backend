@@ -1,5 +1,5 @@
 framework:
     assets:
         packages:
-            'flybackend':
+            'system/themes/flybackend':
                 base_path: '/system/themes/flybackend'
