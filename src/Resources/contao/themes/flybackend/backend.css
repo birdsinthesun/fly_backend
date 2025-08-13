@@ -160,16 +160,7 @@ body,
         color:#fff;
     }
 /* list view */
-.operations-menu-container > button::after{
-    content:"\f0d7";
-    font-family:"Font Awesome";
-    font-weight:900;
-    color: #fff;
-    font-size:1.4rem;
-    line-height:1.4rem;
-    margin-top:-0.6rem;
-    margin-left:-0.2rem;
-    }
+
 #tl_listing [href^="/contao/preview"]::after{
     margin-top:0;
     margin-left:-1.5rem;
@@ -182,8 +173,8 @@ body,
     line-height:1.5rem;
     width:2rem;
     }
-#tl_listing .tl_listing,
-#tl_listing .tl_listing ul{
+#tl_listing ul.tl_listing,
+#tl_listing ul.tl_listing ul{
      box-sizing:border-box;
     display:inline-block;
     list-style:none;
@@ -192,8 +183,8 @@ body,
     }
 #tl_listing{
      box-sizing:border-box;}
-#tl_listing .tl_listing > li,
-#tl_listing .tl_listing ul > li{
+#tl_listing ul.tl_listing > li,
+#tl_listing ul.tl_listing ul > li{
    line-height: 2rem;
     box-sizing:border-box;
     display:flex;
@@ -203,8 +194,6 @@ body,
 #tl_listing .tl_listing .tl_right > div > ul{
    
     box-sizing:border-box;
-    
-    
     display:flex;
      flex-direction: row;
        justify-content:space-between;
@@ -223,11 +212,162 @@ body,
     width:auto;
     
     }
-/*list operation container */
-[data-contao--deeplink-target="secondary"]{display:none;}
-.operations{
-    min-width:25vw;
+/* table view */
+#tl_listing tbody,
+#tl_listing tbody th{
+    width:100%;
+       }
+#tl_listing tbody tr{
+    width:100%;
+    display:flex;
+    flex-direction: row;
+       justify-content:space-between;
+       border-bottom:1px solid var(--color-border);
+       }
+#tl_listing tbody tr td{
+    display:flex;
+    border-bottom:0;
+       }
+/* folder view*/
+.foldable--open::before{
+      content:"\f07c";
+    font-family:"Font Awesome";
+    font-weight:900;
+    color:var(--color-secondary);
+    padding-right:1vw;
     }
+.foldable:not(.foldable--open)::before{
+      content:"\f07b";
+    font-family:"Font Awesome";
+    font-weight:900;
+    color:var(--color-secondary);
+    padding-right:1vw;
+    }
+    
+#tl_listing [data-id^="files/"].tl_file .tl_left{
+    width:100% ;
+    display:flex;
+    flex-direction: row-reverse;
+    justify-content: left;
+}
+#tl_listing [data-id^="files/"].tl_file > .tl_left > *{
+    display:flex;
+    text-align:left;
+    padding-right:1vw;
+}
+#tl_listing [data-id^="files/"].tl_file > .tl_left > a::after{
+    content:"\f0c1";
+    font-family:"Font Awesome";
+    font-weight:900;
+    color: var(--color-secondary);
+    font-size:0.9rem;
+    line-height:1.2rem;
+    width:2rem;
+    padding-top:0.4rem;
+    padding-left:1vw;
+    
+    }
+#tl_listing [data-id^="files/"].tl_folder_top .tl_left,
+#tl_listing [data-id^="files/"].tl_folder_top .tl_right,
+#tl_listing [data-id^="files/"].tl_folder .tl_left,
+#tl_listing [data-id^="files/"].tl_folder .tl_right,
+#tl_listing [data-id^="files/"].tl_file .tl_left,
+#tl_listing [data-id^="files/"].tl_file .tl_right{
+    border:0;
+}
+#tl_listing [data-id^="files/"].tl_file .tl_left{
+     border-bottom: 1px solid var(--color-border);
+     padding-top:0.2rem;
+     padding-bottom:0.2rem;
+     }
+#tl_listing [data-id^="files/"] .tl_right .operations-menu{
+    min-width:5vw;
+    margin-left: -13vw;
+    }
+#tl_listing .tl_file_manager .tl_left [href*="act=paste"]:not(.foldable)::after{
+     content:"\f0a4";
+    font-family:"Font Awesome";
+    font-weight:900;
+    color: var(--color-secondary);
+    font-size:0.9rem;
+    line-height:1.2rem;
+    width:2rem;
+    padding-top:0.4rem;
+    padding-left:1vw;
+    animation: blink 1s step-start infinite;
+    }
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+/* widgets */
+.widget ul{
+    list-style:none;
+    }
+/* edit mode */
+.lang{
+    display:inline-block;
+    width:100%;
+line-height:1.8rem;
+text-align:right;
+
+}
+.lang button{
+     display:inline-block;
+    height:1.4rem;
+    margin-left:0.4rem;
+    
+    }
+.lang button::after{
+    content:"\f1f8";
+    font-family:"Font Awesome";
+    font-weight:900;
+    color: #fff;
+    font-size:1rem;
+    line-height:1.4rem;
+    margin-top:-0.6rem;
+    margin-left:-0.4rem;
+}
+/* operation container */
+#paste_hint p{
+    background-color:rgba(244, 162, 97,0.6);
+    padding: var(--spacing-md);
+    font-size:2rem;
+    color:#fff;
+    }
+.dropzone{
+    display:none;}
+.operations-menu-container > button{
+    height:1.4rem;
+    }
+.operations-menu-container > button::after{
+    content:"\f0d7";
+    font-family:"Font Awesome";
+    font-weight:900;
+    color: #fff;
+    font-size:1.4rem;
+    line-height:1.4rem;
+    margin-top:-0.6rem;
+    margin-left:-0.2rem;
+    }
+button.drag-handle{
+    height:1.4rem;
+    background-color:rgba(244, 162, 97,0.6);
+    }
+button.drag-handle::after{
+    content:"\e05d";
+    font-family:"Font Awesome";
+    font-weight:900;
+    color: #fff;
+    font-size:1.4rem;
+    line-height:1.4rem;
+    margin-top:-0.6rem;
+    margin-left:-0.8rem;
+    }
+[data-contao--deeplink-target="secondary"]{display:none;}
+.operations-menu-container [data-contao--deeplink-target="secondary"]{display:block;}
+
 .operations > ul{
     
     box-sizing:border-box;
@@ -235,6 +375,7 @@ body,
     width:100%;
     display:flex;
      flex-direction: row;
+   
      }
 .operations > ul > li{
 
@@ -243,12 +384,54 @@ body,
     display:flex;
 
      }
+.operations > ul > li > a.edit::before{
+    content:"\f304";
+    font-family:"Font Awesome";
+    font-weight:900;
+    color:var(--color-secondary);
+    padding-right:1vw;
+    
+    }
+.operations > ul > li > a.articles{
+    display:none;}
+.operations > ul > li > a.articles::before{
+    
+    content:"\f03b";
+    font-family:"Font Awesome";
+    font-weight:900;
+    color:var(--color-secondary);
+    padding-right:1vw;
+    
+    }
+.operations > ul > li > a.children::before{
+    content:"\f03c";
+    font-family:"Font Awesome";
+    font-weight:900;
+    color:var(--color-secondary);
+    padding-right:1vw;
+    
+    }
+/* keine Möglichkeit per css zu erfragen ob published/unpublished :-( */
+.operations > ul > li > [href*="field=published"]::before{
+    display:none;
+    content:"\f06e";
+    font-family:"Font Awesome";
+    font-weight:900;
+    color:var(--color-secondary);
+    padding-right:1vw;
+    
+    }
+.operations > ul > li  a > img,
+.operations > ul > li > .color-scheme--dark,
+.operations > ul > li > .color-scheme--light
+{display:none;}
 .operations-menu{
+    
      min-width:25vw;
     position:absolute !important;
     margin-right:0;
     margin-top:0;
-    margin-left: -25vw;
+    margin-left: -31vw;
     left:auto !important;
     right:auto !important;
     top:auto !important;
@@ -256,6 +439,7 @@ body,
     width:auto !important;
     background-color: var(--color-primary);
   border: none;
+    list-style:none;
   border-radius: 12px;
   box-shadow: var(--shadow-xl);
   padding: var(--spacing-xl);
@@ -264,6 +448,64 @@ body,
     display:none !important;}
 .operations-menu.show{
     display:block !important;}
+.operations-menu a.edit::before{
+    content:"\f304";
+    font-family:"Font Awesome";
+    font-weight:900;
+    color:var(--color-secondary);
+    padding-right:1vw;
+    }
+.operations-menu a.children::before{
+    content:"\f03c";
+    font-family:"Font Awesome";
+    font-weight:900;
+    color:var(--color-secondary);
+    padding-right:1vw;
+    }
+.operations-menu a.copy::before{
+    content:"\f24d";
+    font-family:"Font Awesome";
+    font-weight:900;
+    color:var(--color-secondary);
+    padding-right:1vw;
+    }
+.operations-menu a.delete::before{
+    content:"\f1f8";
+    font-family:"Font Awesome";
+    font-weight:900;
+    color:var(--color-secondary);
+    padding-right:1vw;
+    }
+.operations-menu a.show::before{
+    content:"\f129";
+    font-family:"Font Awesome";
+    font-weight:900;
+    color:var(--color-secondary);
+    padding-right:1vw;
+    }
+.operations-menu a.copyChildren::before{
+    content:"\f248";
+    font-family:"Font Awesome";
+    font-weight:900;
+    color:var(--color-secondary);
+    padding-right:1vw;
+    }
+.operations-menu a.cut::before{
+    content:"\f064";
+    font-family:"Font Awesome";
+    font-weight:900;
+    color:var(--color-secondary);
+    padding-right:1vw;
+    }
+/* keine Möglichkeit per css zu erfragen ob published/unpublished :-( */
+.operations-menu [href*="field=published"]::before{
+    content:"\f06e";
+    font-family:"Font Awesome";
+    font-weight:900;
+    color:var(--color-secondary);
+    padding-right:1vw;
+    
+    }
 /* breadcrumb edit*/
 .jump-targets{
     max-width:100%;
@@ -326,7 +568,11 @@ body,
 /* header menu*/
 h1{
     text-align:center;}
-
+#burger{
+    position:absolute;
+    left:0.5rem;
+    top:0.5rem;
+    }
 #home{
     display:inline-block;
     height:4rem;
@@ -353,13 +599,15 @@ h1{
 /* back button*/
 #tl_buttons{
     display: flex;
-     flex-direction: column;
+     flex-direction: row;
     align-items:end;
+    justify-content:flex-end;
     }
 #tl_buttons > *{
     display: flex;
     flex-direction: column;
 	align-items:center;
+    padding: var(--spacing-sm) var(--spacing-lg);
     }
 /*password*/
 #pw_password{
