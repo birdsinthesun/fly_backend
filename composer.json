@@ -3,6 +3,7 @@
   "type": "contao-bundle",
   "description": "Fly Backend Theme for Contao 5.5",
   "license": "MIT",
+  "version": "main",
   "authors": [
     {
       "name": "Monique Hahnefeld",
