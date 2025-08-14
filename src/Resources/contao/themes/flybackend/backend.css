@@ -160,7 +160,11 @@ body,
         color:#fff;
     }
 /* list view */
-
+#tl_listing,
+#tl_listing tbody{
+    min-height:300px;
+    height:auto;
+    }
 #tl_listing [href^="/contao/preview"]::after{
     margin-top:0;
     margin-left:-1.5rem;
@@ -213,19 +217,36 @@ body,
     
     }
 /* table view */
+#tl_listing table.tl_listing{
+    overflow:auto !important;
+    }
 #tl_listing tbody,
 #tl_listing tbody th{
     width:100%;
        }
+#tl_listing tbody tr,
+#tl_listing tbody tr:hover,
+#tl_listing tbody tr:focus,
+#tl_listing tbody tr:hover td,
+#tl_listing tbody tr:focus td{
+      min-height:100% !important;
+     height:auto !important;
+     max-height:100% !important;
+     }
+#tl_listing tbody tr:hover,
+#tl_listing tbody tr:focus,
 #tl_listing tbody tr{
     width:100%;
-   /* display:flex;
+    height:auto;
+  /* display:flex;
     flex-direction: row;
        justify-content:space-between;*/
        border-bottom:1px solid var(--color-border);
        }
+#tl_listing tbody tr:hover td,
+#tl_listing tbody tr:focus td,
 #tl_listing tbody tr td{
-  /*  display:flex;*/
+ /*  display:flex !important;*/
     border-bottom:0;
        }
 #tl_listing tbody tr td:last-child > *{
@@ -310,7 +331,7 @@ body,
 [data-action^="contao--limit-height"]{
     display:none !important;
     }
-#tl_listing.parent_view ul[id^="ul"]{
+#tl_listing.parent_view ul[data-id]{
     list-style:none;
     padding-left:0;
     }
@@ -328,7 +349,7 @@ body,
     grid-template-columns: auto 84vw;
     text-align:left;
     }
-#tl_listing.parent_view .tl_content > div:has(> .cte_preview){
+#tl_listing.parent_view .tl_content > div:has(> .cte_content){
     grid-template-columns: auto 20vw 60vw;
     } 
 
@@ -382,6 +403,11 @@ text-align:right;
     margin-left:-0.4rem;
 }
 /* operation container */
+#tl_breadcrumb img,
+#tl_listing a img,
+[src^="/system/themes"]{
+    display:none;
+    }
 #paste_hint p{
     background-color:rgba(244, 162, 97,0.6);
     padding: var(--spacing-md);
@@ -390,6 +416,9 @@ text-align:right;
     }
 .dropzone{
     display:none;}
+.operations-menu-container > button img{
+    display:none;
+    }
 .operations-menu-container > button{
     height:1.4rem;
     }
@@ -402,6 +431,12 @@ text-align:right;
     line-height:1.4rem;
     margin-top:-0.6rem;
     margin-left:-0.2rem;
+    }
+.operations-menu .drag-handle{
+    display:none;
+    }
+button.drag-handle img{
+    display:none;
     }
 button.drag-handle{
     height:1.4rem;
@@ -499,6 +534,7 @@ button.drag-handle::after{
 .operations-menu.hide{
     display:none !important;}
 .operations-menu.show{
+    z-index:9999999999999999999999;
     display:block !important;}
 .operations-menu a.edit::before{
     content:"\f304";
@@ -514,6 +550,7 @@ button.drag-handle::after{
     color:var(--color-secondary);
     padding-right:1vw;
     }
+.operations-menu button.copy::before,
 .operations-menu a.copy::before{
     content:"\f24d";
     font-family:"Font Awesome";
@@ -521,6 +558,7 @@ button.drag-handle::after{
     color:var(--color-secondary);
     padding-right:1vw;
     }
+.operations-menu button.delete::before,
 .operations-menu a.delete::before{
     content:"\f1f8";
     font-family:"Font Awesome";
@@ -542,6 +580,7 @@ button.drag-handle::after{
     color:var(--color-secondary);
     padding-right:1vw;
     }
+.operations-menu button.cut::before,
 .operations-menu a.cut::before{
     content:"\f064";
     font-family:"Font Awesome";
@@ -549,7 +588,61 @@ button.drag-handle::after{
     color:var(--color-secondary);
     padding-right:1vw;
     }
+.operations-menu [action*="act=create"] button::before,
+.operations-menu a.new::before{
+    content:"\f067";
+    font-family:"Font Awesome";
+    font-weight:900;
+    color:var(--color-secondary);
+    padding-right:1vw;
+    }
+.operations-menu a.elements::before{
+    content:"\f03b";
+    font-family:"Font Awesome";
+    font-weight:900;
+    color:var(--color-secondary);
+    padding-right:1vw;
+    }
+.operations-menu a.modules::before{
+    content:"\f12e";
+    font-family:"Font Awesome";
+    font-weight:900;
+    color:var(--color-secondary);
+    padding-right:1vw;
+    }
+.operations-menu a.layout::before{
+    content:"\f84c";
+    font-family:"Font Awesome";
+    font-weight:900;
+    color:var(--color-secondary);
+    padding-right:1vw;
+    }
+.operations-menu a.imageSizes::before{
+    content:"\f302";
+    font-family:"Font Awesome";
+    font-weight:900;
+    color:var(--color-secondary);
+    padding-right:1vw;
+    }
+.operations-menu a.exportTheme::before{
+    content:"\f019";
+    font-family:"Font Awesome";
+    font-weight:900;
+    color:var(--color-secondary);
+    padding-right:1vw;
+    }
+.operations-menu button img{
+    display:none;
+    }
+.operations-menu button{
+    color: var(--color-secondary);
+    background-color: transparent;
+    border:none;
+    box-shadow:none;
+    padding:0;
+    }
 /* keine Möglichkeit per css zu erfragen ob published/unpublished :-( */
+.operations-menu [data-label-disabled]::before,
 .operations-menu [href*="field=published"]::before{
     content:"\f06e";
     font-family:"Font Awesome";
@@ -729,7 +822,7 @@ h1{
 #left,
 .tl_left {
   background-color: var(--color-primary);
-  border-right: 1px solid var(--color-border);
+
 }
 
 .tl_navigation a,
