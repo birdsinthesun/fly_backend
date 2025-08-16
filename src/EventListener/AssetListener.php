@@ -26,7 +26,7 @@ class AssetListener
         
         if ($this->scopeMatcher->isBackendMainRequest($event)) {
            
-            $GLOBALS['TL_JAVASCRIPT'][] = 'bundles/flybackend/js/filter.js';
+            $GLOBALS['TL_JAVASCRIPT'][] = 'bundles/flybackend/assets/js/filter.js';
            
             
         }
