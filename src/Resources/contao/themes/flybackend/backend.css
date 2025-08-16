@@ -327,12 +327,29 @@ body,
     padding-left:1vw;
     animation: blink 1s step-start infinite;
     }
-@keyframes blink {
-  50% {
-    opacity: 0;
-  }
-}
+
 /* parent view */
+ #tl_listing.parent_view button:has( > [src*="pasteafter"]){
+     color: var(--color-secondary);
+    background-color: transparent;
+    border:none;
+    box-shadow:none;
+    padding:0;
+     
+     }
+ #tl_listing.parent_view button:has( > [src*="pasteafter"])::before{
+     content:"\f0a7";
+    font-family:"Font Awesome";
+    font-weight:900;
+    color: var(--color-secondary);
+    font-size:1.4rem;
+    line-height:1.4rem;
+    width:2rem;
+    padding-top:0.4rem;
+    padding-right:1vw;
+    animation: blink 1s step-start infinite;
+     
+     }
 .limit_toggler,
 [data-action^="contao--limit-height"]{
     display:none !important;
@@ -388,6 +405,31 @@ body,
     justify-content:flex-end;
     }
 /* widgets */
+.widget button[data-action*="copy"],
+.widget button[data-action*="delete"]{
+    color: var(--color-secondary);
+    background-color: transparent;
+    border:none;
+    box-shadow:none;
+    padding:0;
+    
+    }
+.widget button[data-action*="copy"]::before{
+    content:"\f24d";
+    font-family:"Font Awesome";
+    font-weight:900;
+    color:var(--color-secondary);
+    padding-right:1vw;
+    
+    }
+.widget button[data-action*="delete"]::before{
+    content:"\f1f8";
+    font-family:"Font Awesome";
+    font-weight:900;
+    color:var(--color-secondary);
+    padding-right:1vw;
+    
+    }
 .widget ul{
     list-style:none;
     }
@@ -453,6 +495,7 @@ text-align:right;
     display:none;
     }
 button.drag-handle img{
+    z-index:99;
     display: block;
     width: 100%;
     -webkit-filter: opacity(0);
@@ -463,7 +506,6 @@ button.drag-handle img{
     margin-left:-1rem;
     }
 button.drag-handle{
-    height:1.4rem;
     background-color:rgba(244, 162, 97,0.6);
     width:auto;
     height:1.4rem;
@@ -471,6 +513,7 @@ button.drag-handle{
     position:relative;
     }
 button.drag-handle::after{
+    position:absolute;
     content:"\e05d";
     font-family:"Font Awesome";
     font-weight:900;
@@ -842,7 +885,11 @@ width:100%;
     width:100vw;
     box-sizing: border-box;
 }
-
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
 
 /* =============================================================================
    Navigation und Header
