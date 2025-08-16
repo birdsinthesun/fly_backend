@@ -2,7 +2,8 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Ziel-Container finden
   const form = document.querySelector("#main > .content > form");
-console.log('test');
+ const wrapper = document.querySelector("#main > .content");
+
   if (form) {
     // Button erstellen
     const btn = document.createElement("button");
@@ -10,7 +11,7 @@ console.log('test');
     btn.textContent = "Filter"; // Beschriftung nach Wunsch
 
     // Button als erstes Kind ins form prependen
-    form.prepend(btn);
+    wrapper.prepend(btn);
 
     // Klick-Event anhängen
     btn.addEventListener("click", (e) => {
