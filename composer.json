@@ -1,7 +1,7 @@
 {
   "name": "birdsinthesun/fly_backend",
   "type": "contao-bundle",
-  "description": "Fly Backend Theme for Contao 5.5",
+  "description": "Fly Backend Theme for Contao",
   "license": "MIT",
   "version": "main",
   "authors": [
