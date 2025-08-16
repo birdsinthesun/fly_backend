@@ -3,3 +3,7 @@ framework:
         packages:
             'system/themes/flybackend':
                 base_path: '/system/themes/flybackend'
+            'system/themes/flybackend-tuerkis':
+                base_path: '/system/themes/flybackend-tuerkis'
+            'system/themes/flybackend-dark':
+                base_path: '/system/themes/flybackend-dark'
