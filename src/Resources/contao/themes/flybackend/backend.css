@@ -496,8 +496,20 @@ text-align:right;
   height: auto; 
 }
 
-#toggle_filter_area.open {
-  
+
+#toggle_filter_area {
+  float:right;
+}
+#toggle_filter_area::before{
+  content:"\f0b0";
+    font-family:"Font Awesome";
+    font-weight:900;
+    color: #fff;
+    font-size:1rem;
+    line-height:1.4rem;
+    margin-top:-0.6rem;
+    margin-left:-0.8rem;
+    margin-right:0.2rem;
 }
 /* operation container */
 #tl_breadcrumb img,
