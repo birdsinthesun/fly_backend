@@ -430,6 +430,32 @@ body,
     padding-right:1vw;
     
     }
+.widget .tl_radio_table img:first-child{
+    display:block;
+    }
+.widget .tl_checkbox_wizard > span{
+    width:100%;
+    display:inline-block;
+    }
+[data-action*="openModal"]{
+    color: var(--color-secondary);
+    background-color: transparent;
+    border:none;
+    box-shadow:none;
+    padding:0;
+     font-size:1.4rem;
+    line-height:1.4rem;
+    width:2rem;
+    padding-top:0.4rem;
+    }
+.widget button[data-action*="openModal"]::before{
+    content:"\f2d0";
+    font-family:"Font Awesome";
+    font-weight:900;
+    color:var(--color-secondary);
+    padding-right:1vw;
+    
+    }
 .widget ul{
     list-style:none;
     }
