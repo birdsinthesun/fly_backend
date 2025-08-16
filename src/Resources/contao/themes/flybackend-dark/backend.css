@@ -128,8 +128,9 @@ body,
     
 }
 /* navigation left */
-#tl_navigation{
+#tl_left{
     background-color: var(--color-text-light);
+
 }
 #tl_navigation ul{
     list-style:none;
