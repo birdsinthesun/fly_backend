@@ -35,9 +35,9 @@
   --color-secondary-hover: rgba(250, 128, 114, 0.8);
   --color-secondary-active: rgba(250, 128, 114, 0.9);
   --color-text: #d6c3a1;              /* Grauton für Text */
-  --color-text-light: #1f120d;        /* Hellerer Grauton */
-  --color-text-dark: #f5e6cb;         /* Dunklerer Grauton */
-  --color-border: #e2e8f0;            /* Sanfte Rahmenfarbe */
+  --color-text-light: #f5e6cb;        /* Hellerer Grauton */
+  --color-text-dark: #1f120d;         /* Dunklerer Grauton */
+  --color-border: #f5e6cb;            /* Sanfte Rahmenfarbe */
   --color-shadow: rgba(0, 0, 0, 0.6);  /* Sanfte Schatten */
   --color-shadow-hover: rgba(0, 0, 0, 0.85);
   
