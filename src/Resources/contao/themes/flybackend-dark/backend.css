@@ -959,11 +959,7 @@ width:100%;
   padding: var(--spacing-md);
 }
 
-#left,
-.tl_left {
-  background-color: var(--color-primary);
 
-}
 
 .tl_navigation a,
 .tl_level_1 a,
