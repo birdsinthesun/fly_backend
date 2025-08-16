@@ -1,17 +1,24 @@
-$(function () {
-  var _form = $("#main > .content > form");
 
-  if (_form.length) {
+document.addEventListener("DOMContentLoaded", () => {
+  // Ziel-Container finden
+  const form = document.querySelector("#main > .content > form");
+console.log('test');
+  if (form) {
     // Button erstellen
-    var _btn = $('<button id="toggle_filter_area" type="button">Filter</button>');
+    const btn = document.createElement("button");
+    btn.id = "toggle_filter_area";
+    btn.textContent = "Filter"; // Beschriftung nach Wunsch
 
-    // prepend in das form
-    _form.prepend(_btn);
+    // Button als erstes Kind ins form prependen
+    form.prepend(btn);
 
-    // Klick-Event
-    _btn.on("click", function () {
-      $(this).toggleClass("open");
-      _form.toggleClass("open");
+    // Klick-Event anhängen
+    btn.addEventListener("click", (e) => {
+      e.preventDefault(); // verhindert evtl. Submit
+
+      btn.classList.toggle("open");
+      form.classList.toggle("open");
     });
   }
 });
+
