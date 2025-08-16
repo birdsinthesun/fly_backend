@@ -11,14 +11,12 @@ use Symfony\Component\HttpKernel\KernelEvents;
 #[AsEventListener]
 class AssetListener
 {
-    private Connection $db;
     
     private ScopeMatcher $scopeMatcher;
     
-    public function __construct(Connection $db,ScopeMatcher $scopeMatcher)
+    public function __construct(ScopeMatcher $scopeMatcher)
     {
         $this->scopeMatcher = $scopeMatcher;
-        $this->db = $db;
     }
 
     public function __invoke(RequestEvent $event): void

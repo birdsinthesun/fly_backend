@@ -1,7 +1,6 @@
 services:
     Bits\FlyBackendBundle\EventListener\AssetListener:
         arguments:
-            $db: '@doctrine.dbal.default_connection'
             $scopeMatcher: '@contao.routing.scope_matcher'
         tags:
             - { name: 'kernel.event_listener', event: 'kernel.request', priority: -2550 }
