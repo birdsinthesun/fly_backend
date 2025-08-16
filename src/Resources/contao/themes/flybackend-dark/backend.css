@@ -866,9 +866,13 @@ h1{
 #tmenu__profile > ul{
     display:none;
     }
+#tmenu__profile li.info >*{
+    color:var(--color-text-dark);
+    }
 #tmenu__profile.active > ul{
     display:block;
     background-color: var(--color-text-light);
+    z-index:9999;
     position:absolute;
     margin-top:3rem;
     }
