@@ -30,13 +30,13 @@
 
 :root {
   /* Farbpalette */
-  --color-primary: #ffffff;           /* Haupthintergrund weiß */
+  --color-primary: #24150f;           /* Haupthintergrund weiß */
   --color-secondary: #fa8072;         /* Lachsrot für Akzente */
   --color-secondary-hover: rgba(250, 128, 114, 0.8);
   --color-secondary-active: rgba(250, 128, 114, 0.9);
-  --color-text: #4a5568;              /* Grauton für Text */
-  --color-text-light: #718096;        /* Hellerer Grauton */
-  --color-text-dark: #2d3748;         /* Dunklerer Grauton */
+  --color-text: #718096;              /* Grauton für Text */
+  --color-text-light: #2d3748;        /* Hellerer Grauton */
+  --color-text-dark: #718096;         /* Dunklerer Grauton */
   --color-border: #e2e8f0;            /* Sanfte Rahmenfarbe */
   --color-shadow: rgba(0, 0, 0, 0.1);  /* Sanfte Schatten */
   --color-shadow-hover: rgba(0, 0, 0, 0.15);
@@ -150,14 +150,14 @@ body,
   
     display:inline-block;
     padding:0.5rem;
-    color:#fff;
+    color:#24150f;
     }
 #tl_breadcrumb li a{
     
-        color:#fff;
+        color:#24150f;
     }
 #tl_breadcrumb li a:hover{
-        color:#fff;
+        color:#24150f;
     }
 /* list view */
 #tl_listing,
@@ -477,7 +477,7 @@ text-align:right;
     content:"\f1f8";
     font-family:"Font Awesome";
     font-weight:900;
-    color: #fff;
+    color: #24150f;
     font-size:1rem;
     line-height:1.4rem;
     margin-top:-0.6rem;
@@ -504,7 +504,7 @@ text-align:right;
   content:"\f0b0";
     font-family:"Font Awesome";
     font-weight:900;
-    color: #fff;
+    color: #24150f;
     font-size:1rem;
     line-height:1.4rem;
     margin-top:-0.6rem;
@@ -523,7 +523,7 @@ text-align:right;
     background-color:rgba(244, 162, 97,0.6);
     padding: var(--spacing-md);
     font-size:2rem;
-    color:#fff;
+    color:#24150f;
     }
 .dropzone{
     display:none;}
@@ -537,7 +537,7 @@ text-align:right;
     content:"\f0d7";
     font-family:"Font Awesome";
     font-weight:900;
-    color: #fff;
+    color: #24150f;
     font-size:1.4rem;
     line-height:1.4rem;
     margin-top:-0.6rem;
@@ -569,7 +569,7 @@ button.drag-handle::after{
     content:"\e05d";
     font-family:"Font Awesome";
     font-weight:900;
-    color: #fff;
+    color: #24150f;
     font-size:1.4rem;
     line-height:1.4rem;
     margin-top:-0.6rem;
@@ -798,7 +798,7 @@ button.drag-handle::after{
     font-size:0.9rem;
     padding:0.5vw;
     background-color:transparent;
-    color:#fff;
+    color:#24150f;
     box-shadow:none;
     
     }
@@ -900,7 +900,7 @@ width:100%;
     content:"\f084";
     font-family:"Font Awesome";
     font-weight:900;
-    color:#fff;
+    color:#24150f;
     line-height:2rem;
    
    
