@@ -483,6 +483,22 @@ text-align:right;
     margin-top:-0.6rem;
     margin-left:-0.4rem;
 }
+/* filter area */
+
+#main > .content > form{
+    
+    overflow:hidden;
+    height:0;
+  transition: height 0.6s ease;
+}
+
+#main > .content > form.open {
+  height: auto; 
+}
+
+#toggle_filter_area.open {
+  
+}
 /* operation container */
 #tl_breadcrumb img,
 #tl_listing a img,
