@@ -20,7 +20,7 @@
     }
   },
   "extra": {
-    "contao-manager-plugin": "Bits\\FlyBackendBundle\\ContaoManager\\Plugin",
+    "contao-manager-plugin": "Bits\\FlyBackendBundle\\ContaoManager\\Plugin"
   },
   "scripts": {
             "post-install-cmd": [
