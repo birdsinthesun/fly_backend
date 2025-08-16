@@ -870,6 +870,7 @@ h1{
     display:block;
     background-color: var(--color-text-light);
     position:absolute;
+    margin-top:3rem;
     }
 .burger.last,
 .icon-color-scheme{display:none;}
