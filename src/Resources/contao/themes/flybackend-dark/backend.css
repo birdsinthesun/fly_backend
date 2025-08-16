@@ -651,7 +651,7 @@ button.drag-handle::after{
     top:auto !important;
     botton:auto !important;
     width:auto !important;
-    background-color: var(--color-primary);
+    background-color: var(--color-text-light);
   border: none;
     list-style:none;
   border-radius: 12px;
@@ -868,6 +868,8 @@ h1{
     }
 #tmenu__profile.active > ul{
     display:block;
+    background-color: var(--color-text-light);
+    position:absolute;
     }
 .burger.last,
 .icon-color-scheme{display:none;}
