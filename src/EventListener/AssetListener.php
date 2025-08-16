@@ -1,6 +1,6 @@
 <?php
 
-namespace Bits\MmShopBundle\EventListener\Asset;
+namespace Bits\FlyBackendBundle\EventListener\Asset;
 
 use Contao\CoreBundle\Routing\ScopeMatcher;
 use Symfony\Component\EventDispatcher\Attribute\AsEventListener;
