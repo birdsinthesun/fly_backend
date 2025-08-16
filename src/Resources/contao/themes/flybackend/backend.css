@@ -195,6 +195,12 @@ body,
      flex-direction: row;
    
     }
+#tl_listing ul.tl_listing > li:hover > .tl_left,
+#tl_listing ul.tl_listing > li:hover > .tl_right,
+#tl_listing ul.tl_listing ul > li:hover > .tl_left,
+#tl_listing ul.tl_listing ul > li:hover > .tl_right{
+    background-color: rgba(250, 128, 114, 0.1);
+    }
 #tl_listing .tl_listing .tl_right > div > ul{
    
     box-sizing:border-box;
@@ -331,6 +337,13 @@ body,
 [data-action^="contao--limit-height"]{
     display:none !important;
     }
+
+#t0l_listing.parent_view li > div .cte_content{
+      overflow:auto !important;
+      height:auto !important;
+      max-height:100% !important;
+    }
+
 #tl_listing.parent_view ul[data-id]{
     list-style:none;
     padding-left:0;
@@ -340,7 +353,7 @@ body,
     width:100% ;
     box-sizing:border-box;
     display: grid;
-    
+  
     direction: rtl; /* Trick: Spaltenreihenfolge umkehren */
     border-bottom:1px solid var(--color-border);
     
@@ -407,6 +420,10 @@ text-align:right;
 #tl_listing a img,
 [src^="/system/themes"]{
     display:none;
+    
+    }
+[style*="system/themes"]{
+    background-image:none !important;
     }
 #paste_hint p{
     background-color:rgba(244, 162, 97,0.6);
@@ -436,11 +453,22 @@ text-align:right;
     display:none;
     }
 button.drag-handle img{
-    display:none;
+    display: block;
+    width: 100%;
+    -webkit-filter: opacity(0);
+    filter: opacity(0);
+    position: absolute;
+    height: 100% !important;
+    margin-top:-0.5rem;
+    margin-left:-1rem;
     }
 button.drag-handle{
     height:1.4rem;
     background-color:rgba(244, 162, 97,0.6);
+    width:auto;
+    height:1.4rem;
+    display:inline-block;
+    position:relative;
     }
 button.drag-handle::after{
     content:"\e05d";
@@ -739,20 +767,29 @@ h1{
 #tmenu__profile > ul{
     display:none;
     }
+#tmenu__profile.active > ul{
+    display:block;
+    }
 .burger.last,
 .icon-color-scheme{display:none;}
 /* back button*/
+#tl_buttons .operations-menu-container{
+    display:none !important;
+    }
 #tl_buttons{
-    display: flex;
-     flex-direction: row;
-    align-items:end;
-    justify-content:flex-end;
+width:100%;
+
     }
 #tl_buttons > *{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 	align-items:center;
-    padding: var(--spacing-sm) var(--spacing-lg);
+        justify-content:flex-end;
+  
+    }
+#tl_buttons > * > *{
+    display: flex;
+      padding: var(--spacing-sm) var(--spacing-lg);
     }
 /*password*/
 #pw_password{
