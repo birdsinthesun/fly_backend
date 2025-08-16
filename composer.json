@@ -32,7 +32,7 @@
                 "cd system/themes && ln -sfn ../../vendor/birdsinthesun/fly_backend/src/Resources/contao/themes/flybackend flybackend"
             ],
             "post-update-cmd": [
-                ,
+                
                 "@php bin/console asset:install --relative"
                 "@php vendor/bin/contao-setup",
                 "cd system/themes && ln -sfn ../../vendor/birdsinthesun/fly_backend/src/Resources/contao/themes/flybackend flybackend"
