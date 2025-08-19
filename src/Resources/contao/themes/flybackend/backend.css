@@ -260,6 +260,8 @@ body,
   float:right;
        }
 /* folder view*/
+.foldable{display:none;}
+.tl_file_manager .foldable{display:block;}
 .tl_file_manager .foldable--open::before{
       content:"\f07c";
     font-family:"Font Awesome";
@@ -327,29 +329,17 @@ body,
     padding-left:1vw;
     animation: blink 1s step-start infinite;
     }
-
+/* tree view */
+#tl_listing.tree_view ul.tl_tree{
+    width:100%;
+    display:inline-block;
+    box-sizing:border-box;
+    }
+#tl_listing.tree_view ul li .tl_left{
+    padding-left:0 !important;
+    }
 /* parent view */
- #tl_listing.parent_view button:has( > [src*="pasteafter"]){
-     color: var(--color-secondary);
-    background-color: transparent;
-    border:none;
-    box-shadow:none;
-    padding:0;
-     
-     }
- #tl_listing.parent_view button:has( > [src*="pasteafter"])::before{
-     content:"\f0a7";
-    font-family:"Font Awesome";
-    font-weight:900;
-    color: var(--color-secondary);
-    font-size:1.4rem;
-    line-height:1.4rem;
-    width:2rem;
-    padding-top:0.4rem;
-    padding-right:1vw;
-    animation: blink 1s step-start infinite;
-     
-     }
+
 .limit_toggler,
 [data-action^="contao--limit-height"]{
     display:none !important;
@@ -509,6 +499,42 @@ text-align:right;
     line-height:1.4rem;
     margin-top:-0.6rem;
 }
+/* paste */
+#tl_listing button:has( > [src*="pasteafter"]),
+#tl_listing button:has( > [src*="pasteinto"]){
+    color: var(--color-secondary);
+    background-color: transparent;
+    border:none;
+    box-shadow:none;
+    padding:0;
+     
+     }
+ #tl_listing button:has( > [src*="pasteafter"])::before{
+     content:"\f0a7";
+    font-family:"Font Awesome";
+    font-weight:900;
+    color: var(--color-secondary);
+    font-size:1.4rem;
+    line-height:1.4rem;
+    width:2rem;
+    padding-top:0.4rem;
+    padding-right:1vw;
+    animation: blink 1s step-start infinite;
+     
+     }
+ #tl_listing button:has( > [src*="pasteinto"])::before{
+     content:"\f0a4";
+    font-family:"Font Awesome";
+    font-weight:900;
+    color: var(--color-secondary);
+    font-size:1.4rem;
+    line-height:1.4rem;
+    width:2rem;
+    padding-top:0.4rem;
+    padding-right:1vw;
+    animation: blink 1s step-start infinite;
+     
+     }
 /* operation container */
 #tl_breadcrumb img,
 #tl_listing a img,
@@ -862,14 +888,8 @@ h1{
 #tmenu__profile > ul{
     display:none;
     }
-#tmenu__profile li.info >*{
-    color:var(--color-text-dark);
-    }
 #tmenu__profile.active > ul{
     display:block;
-    z-index:9999;
-    position:absolute;
-    margin-top:3rem;
     }
 .burger.last,
 .icon-color-scheme{display:none;}
@@ -945,7 +965,7 @@ width:100%;
 }
 @keyframes blink {
   50% {
-    opacity: 0;
+    opacity: 0.4;
   }
 }
 
