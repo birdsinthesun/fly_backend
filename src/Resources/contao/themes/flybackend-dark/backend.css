@@ -897,10 +897,21 @@ h1{
 #tmenu__profile.active > ul{
     display:block;
     background-color: var(--color-text-light);
-    z-index:9999;
-    position:absolute;
     margin-top:3rem;
+    position:absolute;
+    list-style:none;
+    width:auto;
+    padding:1rem;
+    border:1px solid var(--color-secondary);
+    z-index:9998;
     }
+#tmenu__profile.active > ul li,
+#tmenu__profile.active > ul li a,
+#tmenu__profile.active > ul li strong,
+#tmenu__profile.active > ul li span{
+    display:inline-block;
+    width:100%;
+}
 .burger.last,
 .icon-color-scheme{display:none;}
 /* back button*/

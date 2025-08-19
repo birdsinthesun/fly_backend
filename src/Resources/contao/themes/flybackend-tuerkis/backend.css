@@ -891,11 +891,23 @@ h1{
     color:var(--color-text-dark);
     }
 #tmenu__profile.active > ul{
-    display:block;
-    z-index:9999;
-    position:absolute;
     margin-top:3rem;
+    background-color:var(--color-primary);
+    position:absolute;
+    display:block;
+    list-style:none;
+    width:auto;
+    padding:1rem;
+    border:1px solid var(--color-secondary);
+    z-index:9998;
     }
+#tmenu__profile.active > ul li,
+#tmenu__profile.active > ul li a,
+#tmenu__profile.active > ul li strong,
+#tmenu__profile.active > ul li span{
+    display:inline-block;
+    width:100%;
+}
 .burger.last,
 .icon-color-scheme{display:none;}
 /* back button*/
