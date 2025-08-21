@@ -1,5 +1,5 @@
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("turbo:load", () => {
   // Ziel-Container finden
   const form = document.querySelector("#main > .content > form");
  const wrapper = document.querySelector("#main > .content");
